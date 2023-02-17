@@ -14,7 +14,6 @@ console.log("Category:", secondCategoryTitle.textContent);
 console.log("Elements:", secondCategoryElements.length);
 
 const lastCategoryTitle = list.lastElementChild.querySelector('h2');
-
 const lastCategoryElements = list.lastElementChild.querySelectorAll('li');
 console.log("Category:", lastCategoryTitle.textContent);
 console.log("Elements:", lastCategoryElements.length);
