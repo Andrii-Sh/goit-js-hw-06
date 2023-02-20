@@ -10,7 +10,7 @@ decrementBtn.addEventListener("click", () => {
     counterValue -= 1;
     counterEl.textContent = counterValue;
 });
-    
+
 incrementBtn.addEventListener("click", () => { 
     counterValue += 1;
     counterEl.textContent = counterValue;
