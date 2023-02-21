@@ -11,6 +11,5 @@ textInput.addEventListener("blur", (event) => {
     } else {
         textInput.classList.add("invalid");
     }    
-
 });
 
