@@ -6,10 +6,10 @@ textInput.addEventListener("blur", (event) => {
 
     const inputValue = event.currentTarget.value.trim();
 
+    textInput.classList.add("invalid");
+
     if (inputValue.length === REQUIRED_LENGTH) {
-        textInput.classList.add("valid");
-    } else {
-        textInput.classList.add("invalid");
-    }    
+        textInput.classList.replace("invalid", "valid");        
+    }
 });
 
