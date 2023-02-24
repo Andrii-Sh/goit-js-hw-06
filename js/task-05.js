@@ -1,8 +1,8 @@
-const form = document.querySelector('#name-input');
-const message = document.querySelector('#name-output');
+const formEl = document.querySelector('#name-input');
+const messageEl = document.querySelector('#name-output');
 
-form.addEventListener("input", (event) =>
+formEl.addEventListener("input", (event) =>
     event.currentTarget.value.trim() === ""
-        ? message.textContent = "Anonymous"
-        : message.textContent = event.currentTarget.value
+        ? messageEl.textContent = "Anonymous"
+        : messageEl.textContent = event.currentTarget.value
     );

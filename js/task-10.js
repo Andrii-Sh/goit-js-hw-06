@@ -2,37 +2,42 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-const inputNumber = document.querySelector('input[type="number"]');
-const createBtn = document.querySelector('button[data-create]');
-const destroyBtn = document.querySelector('button[data-destroy]');
-const boxesContainer = document.querySelector('div#boxes');
+const inputNumberEl = document.querySelector('input[type="number"]');
+const createBtnEl = document.querySelector('button[data-create]');
+const destroyBtnEl = document.querySelector('button[data-destroy]');
+const boxesContainerEl = document.querySelector('div#boxes');
 
-createBtn.addEventListener("click", createBoxes);
-inputNumber.addEventListener("change", () => { });
-destroyBtn.addEventListener("click", destroyBoxes);
+createBtnEl.addEventListener("click", onCreateBtnClick);
+destroyBtnEl.addEventListener("click", onDestroyBtnClick);
+
+function onCreateBtnClick() {
+  createBoxes();
+}
+
+function onDestroyBtnClick() {
+  destroyBoxes();
+}
 
 function createBoxes() { 
   let murkup = [];
 
-  let elWidth = 30;
-  let elHeight = elWidth;
+  let sizes = 30;
 
-  for (let i = 0; i < inputNumber.value; i += 1) {
+  for (let i = 0; i < inputNumberEl.value; i += 1) {
     const box = document.createElement("div");
-    box.style.width = elWidth + "px";
-    elWidth += 10;
-    box.style.height = elHeight + "px";
-    elHeight += 10;
+    box.style.width = sizes + "px";
+    box.style.height = sizes + "px";
+    sizes += 10;
     box.style.backgroundColor = getRandomHexColor();
     
     murkup.push(box); 
   }
 
-  boxesContainer.append(...murkup);  
+  boxesContainerEl.append(...murkup);  
 }
 
 function destroyBoxes() { 
-  boxesContainer.innerHTML = "";
+  boxesContainerEl.innerHTML = "";
 }
 
 

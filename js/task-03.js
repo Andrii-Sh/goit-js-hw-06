@@ -13,8 +13,8 @@ const images = [
   },
 ];
 
-const gallery = document.querySelector('.gallery');
+const galleryEl = document.querySelector('.gallery');
 
 const murkup = images.map(img => `<li><img src=${img.url} alt=${img.alt}/></li>`).join("");
 
-gallery.insertAdjacentHTML("afterbegin", murkup);
+galleryEl.insertAdjacentHTML("afterbegin", murkup);
